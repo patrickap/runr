@@ -21,7 +21,8 @@ default_options: &default_options
 
 commands:
   # Specify the command name which can be run using the Runr CLI.
-  # This command config is equivalent to: curl https://google.com --request "GET" --header "Content-Type: text/html" --verbose
+  # This command config is equivalent to:
+  # curl https://google.com --request "GET" --header "Content-Type: text/html" --verbose
   request:
     # Specify the command to run. Alternative syntax:
     # command:
@@ -33,8 +34,8 @@ commands:
       # Can be either of type boolean, string, integer, or list for adding multiple.
       # Anchor aliases can easily be used to reuse common options.
       <<: *default_options
-      # Every option can be specified with prefix if needed Defaults to "--" (e.g. --verbose).
-      # Alternative syntax:
+      # Every option can be specified with prefix if needed.
+      # Defaults to "--" (e.g. --verbose). Alternative syntax:
       # --verbose: true
       # -verbose: true
       verbose: true
