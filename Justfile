@@ -20,13 +20,15 @@ restore_version:
 [private]
 go-build:
   @go mod download
-  @go build -ldflags "-X 'github.com/patrickap/runr/m/v2/cmd.version=$(just get_version)'" -o ./build/runr
+  @go build -ldflags "-X 'github.com/patrickap/runr/m/v2/cmd.version=v$(just get_version)'" -o ./build/runr
 
 [private]
 git-publish:
   @git add . -- ':!{{PROJECT_VERSION}}.bak'
   @git commit -m "chore(release): $(just get_version)"
   @git push
+  @git tag -a "v$(just get_version)" -m "Release v$(just get_version)"
+  @git push --tags origin
 
 [private]
 clean_up:
