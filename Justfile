@@ -20,7 +20,7 @@ restore_version:
 [private]
 go-build:
   @go mod download
-  @go build -ldflags "-X 'github.com/patrickap/runr/m/v2/cmd.version=v$(just get_version)'" -o ./build/runr
+  @GOOS=linux GOARCH=amd64 go build -ldflags "-X 'github.com/patrickap/runr/m/v2/cmd.version=v$(just get_version)'" -o ./build/runr
 
 [private]
 git-publish:
