@@ -4,7 +4,7 @@ Runr is a lightweight command runner developed in Go, designed for simplicity an
 
 ## Installation
 
-[Download](./build/runr) the executable of Runr and add it to the `$PATH` variable or manually move it to `/usr/bin/runr`.
+[Download](./build) the executable of Runr and add it to the `$PATH` variable or manually move it to `/usr/local/bin/runr`.
 
 ## Usage
 
