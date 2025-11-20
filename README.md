@@ -22,7 +22,7 @@ default_options: &default_options
 commands:
   # Specify the command name which can be run using the Runr CLI.
   # This command config is equivalent to:
-  # curl https://google.com --request "GET" --header "Content-Type: text/html" --verbose
+  # curl https://google.com --request "GET" --header "Content-Type: text/html" --header "Cache-Control: no-cache" --header "sessionId=3f2a9b10a8c749e78c6f1a234567d890" --verbose
   request:
     # Specify the command to run. Alternative syntax:
     # command:
